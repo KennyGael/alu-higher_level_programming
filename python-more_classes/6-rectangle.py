@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Module that defines a Rectangle and tracks instances."""
+"""Defines a Rectangle class that models a geometric rectangle.
+
+Includes width and height validation, area and perimeter calculation,
+string and formal string representations, instance tracking, and cleanup message on deletion.
+"""
 
 
 class Rectangle:
