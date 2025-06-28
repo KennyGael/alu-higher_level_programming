@@ -2,7 +2,8 @@
 """Defines a Rectangle class that models a geometric rectangle.
 
 Includes width and height validation, area and perimeter calculation,
-string and formal string representations, instance tracking, and cleanup message on deletion.
+string and formal string representations, instance tracking, and
+a message printed upon instance deletion.
 """
 
 
@@ -56,3 +57,16 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
+        """Return the string representation of the rectangle using '#'."""
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+
+    def __repr__(self):
+        """Return a string that can recreate this rectangle using eval()."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """Print a message and update instance count when deleted."""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
