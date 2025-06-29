@@ -14,7 +14,9 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """
-        Initialize Square with size (validated and used for both width and height).
+        Initialize Square with size.
+
+        Validates size and uses it for both width and height.
         """
         self.integer_validator("size", size)
         self.__size = size
