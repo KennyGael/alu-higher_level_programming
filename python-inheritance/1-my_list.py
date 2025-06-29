@@ -12,7 +12,7 @@ class MyList(list):
 
     def print_sorted(self):
         """
-        Prints the list in ascending sorted order.
+        Returns the list in ascending sorted order.
 
         Example:
         >>> my_list = MyList()
@@ -20,4 +20,4 @@ class MyList(list):
         >>> my_list.print_sorted()
         [1, 3, 4]
         """
-        print(sorted(self))
+        return sorted(self)
