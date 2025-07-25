@@ -12,7 +12,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """Return dict of Student instance, optionally filtered"""
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
+        is_str_list = (
+            isinstance(attrs, list) and
+            all(isinstance(attr, str) for attr in attrs)
+        )
+        if is_str_list:
             return {
                 attr: getattr(self, attr)
                 for attr in attrs if hasattr(self, attr)
