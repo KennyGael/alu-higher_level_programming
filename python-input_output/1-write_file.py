@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that writes text to a file and returns number of characters written"""
+"""Module for writing text to a file"""
 
 
 def write_file(filename="", text=""):
