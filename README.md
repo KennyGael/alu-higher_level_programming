@@ -1,3 +1,3 @@
-# ALU Higher Level Programming
+# Python Input/Output Project
 
-This repository contains Python solutions for higher-level programming tasks, including file input/output.
+This project covers basic input and output operations in Python, including reading and writing files, using standard streams, and applying good coding practices.
