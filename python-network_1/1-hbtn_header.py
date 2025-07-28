@@ -1,7 +1,15 @@
 #!/usr/bin/python3
-"""Displays the value of X-Request-Id from header"""
-import urllib.request
+""" A script that:
+- takes a URL as input,
+- sends a request to that URL, and retrieves the value
+- of the X-Request-Id header from the response.
+"""
 import sys
+import urllib.request
 
-with urllib.request.urlopen(sys.argv[1]) as response:
-    print(response.getheader('X-Request-Id'))
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    request = urllib.request.Request(url)
+    with urllib.request.urlopen(request) as response:
+        print(dict(response.headers).get("X-Request-Id"))

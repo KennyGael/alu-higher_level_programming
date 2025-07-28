@@ -1,10 +1,15 @@
 #!/usr/bin/python3
-"""Displays body or error code depending on status"""
-import requests
+""" A script that: accepts a URL as input,
+sends a request to that URL, and displays the body of the response.
+"""
 import sys
+import requests
 
-r = requests.get(sys.argv[1])
-if r.status_code >= 400:
-    print("Error code: {}".format(r.status_code))
-else:
-    print(r.text)
+if __name__ == "__main__":
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
+    else:
+        print(r.text)

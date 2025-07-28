@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""Sends POST request with email using requests"""
+""" Sends a POST request with an email to a specified URL. """
 import requests
 import sys
 
-data = {'email': sys.argv[2]}
-r = requests.post(sys.argv[1], data=data)
-print(r.text)
+if __name__ == "__main__":
+    email = {'email': sys.argv[2]}
+    r = requests.post(sys.argv[1], data=email)
+    print(r.text)
