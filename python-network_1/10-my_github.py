@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ A script that:
 - accepts your GitHub credentials (username and password),
