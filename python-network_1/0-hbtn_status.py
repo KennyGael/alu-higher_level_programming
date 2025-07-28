@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ Fetches the content from https://alu-intranet.hbtn.io/status. """
 import urllib.request
