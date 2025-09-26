@@ -116,4 +116,4 @@ semistandard filename.js
 - I checked line counts using:
 ```bash
 wc -l filename.js
-```
+```# JavaScript - Warm up
